@@ -1,0 +1,23 @@
+*Não é uma boa prática devolver entidades da JPA no seu controller, pois devolve a classe toda.
+Criamos um class DTO Data Transfer Object ou VO (Value Object) devolve somente o que quero. 
+
+*DTO só criamos getter
+
+*modelo REST são chamadas de "recursos".
+cada recurso vai ter uma "URI", um Identificador Único.
+Usamos os verbo Http.
+E essas representações são feitas pelos "Media types", pelos formatos. Geralmente o pessoal utiliza o JSON, mas poderia ser qualquer formato, como XML, HTML, TXT, binário ou qualquer outro.
+Perceba que, no modelo REST, a ideia é utilizar os conceitos do protocolo HTTP: as URIs, verbos, representações, media types, entre outros.
+"Comunicação Stateless" -Os servidores da internet no mundo não estão guardando estado da comunicação.
+
+*http://localhost:8080/h2-console
+
+*findByCursoNome - onde Curso é a entidade de relacionamento e Nome é o atributo dentro dessa entidade de relacionamento.
+
+*@RequestBody - Indicar ao Spring que os parâmetros enviados no corpo da requisição devem ser atribuídos ao parâmetro do método.
+
+*Versão2.3.0 do Spring Boot precisa inserir no pom.xml a dependência.
+
+*Para interceptar as exceptions que forem lançadas nos métodos das classes controller, devemos criar uma classe anotada com @RestControllerAdvice
+
+* "salvar", "alterar" e "excluir", deveríamos colocar o @Transactional
